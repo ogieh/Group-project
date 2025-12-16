@@ -35,7 +35,32 @@ def kamsi_dict():
     translate = tiv_english_dict.get(user_input)
 
     if translate:
-        print(f"\nSuccess: The Tiv translation for the word '{user_input}' is '{translate}'")
+        print(f"\nSuccess: The Tiv translation for the word '{user_input}' is '{translate}'")  
     else:
         print(f"\nError: The word '{user_input}' is not found in this dictionary")
+
 kamsi_dict()
+
+
+Yoruba_dict = {
+ "Good-morning": "Ekaro"
+"How are you?": "Ba wo ni?"
+"Good-evening" : "Ekale"
+    "Woman" : " Obirin"
+   "Mother" : "Iya"
+   "Father" : "Baba"
+   "School" : "Alakoiwe"
+   "House"  : "ile"
+   "Food"   : "Onje"
+   "Book"   : "Iwe"
+   "Shoe"   : "Bata"
+   "Cloth"  : "Aso"
+   "Hair"   : "Irun"
+   "SackBag": "Saka"
+   "Snake"    : "Ejo"
+   "Light"  : "Ina"
+   "Boy"    : "Omo-okunrin"
+   "Girl"   : "Omo-obirin"
+   "Beans"  : "Ewa"
+   "please" : "Ejor"
+}
