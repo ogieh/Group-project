@@ -61,6 +61,30 @@ Yoruba_dict = {
    "Beans"  : "Ewa",
    "please" : "Ejor",
 }
+
+#-----------------Ella Dictionary-----------------------
+Hausa_dict = {
+    "Sannu" : "Hello",
+    "Ina kwana" : "Good morning",
+    "Ina wuni" : "Good afternoon",
+    "Ina yini" : "Good evening",
+    "Lafiya" : "Fine",
+    "Nagode" : "Thank you",
+    "Don Allah" : "Please",
+    "Eh" : "Yes",
+    "A'a" : "No",
+    "Ruwa" : "Water",
+    "Abinci" : "Food",
+    "Gida" : "House",
+    "Mutum" : "Person",
+    "Yaro" : "Boy",
+    "Yarinya" : "Girl",
+    "Mota" : "Car",
+    "Kudi" : "Money",
+    "Kasuwa" : "Market",
+    "Makaranta" : "School",
+    "Aiki" : "Job",
+}
 #-----------------Gabriel Dictionary--------------------
 otuo_dict = {
     "Afternoon" : "Oronta",
