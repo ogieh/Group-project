@@ -61,7 +61,7 @@ Yoruba_dict = {
    "Beans"  : "Ewa",
    "please" : "Ejor",
 }
-#-----------------Gabriel Otuo Dictionary--------------------
+#-----------------Gabriel Dictionary--------------------
 otuo_dict = {
     "Afternoon" : "Avan",
     "Bird" : "Ahiame",
@@ -130,5 +130,6 @@ def main():
     else:
         print("Invalid choice. Please select a valid dictionary.")
 main()
+
 
 
