@@ -151,69 +151,70 @@ igbo_to_english_dict = {
 }
 
 # Create the reverse dictionary for English to Igbo
-kelechi_dict = {v: k for k, v in igbo_to_english_dict.items()}
+def kelechi_dict():
+    kelechi_dict = {v: k for k, v in igbo_to_english_dict.items()}
 
-print(f"\n📚 Dictionary contains {len(igbo_to_english_dict)} words/phrases")
-print("-" * 50)
+    print(f"\n📚 Dictionary contains {len(igbo_to_english_dict)} words/phrases")
+    print("-" * 50)
 
-while True:
-    print("\n" + "=" * 50)
-    print("TRANSLATION OPTIONS:")
-    print("1. English → Igbo")
-    print("2. Igbo → English")
-    print("3. Show all words")
-    print("4. Quit")
-    print("=" * 50)
-
-    choice = input("\nChoose option (1-4): ").strip()
-
-    # QUIT
-    if choice == '4':
-        print("\nDaalụ! (Thank you!) Ka ọ dị! (Goodbye!)")
-        break
-
-    # SHOW ALL WORDS
-    elif choice == '3':
+    while True:
         print("\n" + "=" * 50)
-        print("ALL WORDS IN DICTIONARY:")
+        print("TRANSLATION OPTIONS:")
+        print("1. English → Igbo")
+        print("2. Igbo → English")
+        print("3. Show all words")
+        print("4. Quit")
         print("=" * 50)
-        print("\nENGLISH → IGBO:")
-        print("-" * 30)
-        for i, (eng, igbo) in enumerate(sorted(english_to_igbo_dict.items()), 1):
-            print(f"{i:2}. {eng:20} → {igbo}")
 
-        print("\nIGBO → ENGLISH:")
-        print("-" * 30)
-        for i, (igbo, eng) in enumerate(sorted(igbo_to_english_dict.items()), 1):
-            print(f"{i:2}. {igbo:20} → {eng}")
-        continue
+        choice = input("\nChoose option (1-4): ").strip()
 
-    # ENGLISH TO IGBO
-    elif choice == '1':
-        word = input("\nEnter English word/phrase: ").strip().lower()
-        if word in english_to_igbo_dict:
-            print(f"\n✓ Translation: '{word}' → '{english_to_igbo_dict[word]}'")
+        # QUIT
+        if choice == '4':
+            print("\nDaalụ! (Thank you!) Ka ọ dị! (Goodbye!)")
+            break
+
+        # SHOW ALL WORDS
+        elif choice == '3':
+            print("\n" + "=" * 50)
+            print("ALL WORDS IN DICTIONARY:")
+            print("=" * 50)
+            print("\nENGLISH → IGBO:")
+            print("-" * 30)
+            for i, (eng, igbo) in enumerate(sorted(kelechi_dict.items()), 1):
+                print(f"{i:2}. {eng:20} → {igbo}")
+
+            print("\nIGBO → ENGLISH:")
+            print("-" * 30)
+            for i, (igbo, eng) in enumerate(sorted(igbo_to_english_dict.items()), 1):
+                print(f"{i:2}. {igbo:20} → {eng}")
+            continue
+
+        # ENGLISH TO IGBO
+        elif choice == '1':
+            word = input("\nEnter English word/phrase: ").strip().lower()
+            if word in kelechi_dict:
+                print(f"\n✓ Translation: '{word}' → '{kelechi_dict[word]}'")
+            else:
+                print(f"\n✗ '{word}' not found in dictionary")
+                # Show similar words
+                suggestions = [w for w in kelechi_dict.keys() if word in w or w.startswith(word[:2])]
+                if suggestions:
+                    print(f"   Did you mean: {', '.join(suggestions[:3])}?")
+
+        # IGBO TO ENGLISH
+        elif choice == '2':
+            word = input("\nEnter Igbo word/phrase: ").strip().lower()
+            if word in igbo_to_english_dict:
+                print(f"\n✓ Translation: '{word}' → '{igbo_to_english_dict[word]}'")
+            else:
+                print(f"\n✗ '{word}' not found in dictionary")
+                # Show similar words
+                suggestions = [w for w in igbo_to_english_dict.keys() if word in w or w.startswith(word[:2])]
+                if suggestions:
+                    print(f"   Did you mean: {', '.join(suggestions[:3])}?")
+
         else:
-            print(f"\n✗ '{word}' not found in dictionary")
-            # Show similar words
-            suggestions = [w for w in english_to_igbo_dict.keys() if word in w or w.startswith(word[:2])]
-            if suggestions:
-                print(f"   Did you mean: {', '.join(suggestions[:3])}?")
-
-    # IGBO TO ENGLISH
-    elif choice == '2':
-        word = input("\nEnter Igbo word/phrase: ").strip().lower()
-        if word in igbo_to_english_dict:
-            print(f"\n✓ Translation: '{word}' → '{igbo_to_english_dict[word]}'")
-        else:
-            print(f"\n✗ '{word}' not found in dictionary")
-            # Show similar words
-            suggestions = [w for w in igbo_to_english_dict.keys() if word in w or w.startswith(word[:2])]
-            if suggestions:
-                print(f"   Did you mean: {', '.join(suggestions[:3])}?")
-
-    else:
-        print("❌ Invalid choice. Please enter 1, 2, 3, or 4.")
+            print("❌ Invalid choice. Please enter 1, 2, 3, or 4.")
 
 #-----------------Gabriel Dictionary--------------------
 otuo_dict = {
@@ -268,7 +269,7 @@ def main():
     print("2. Tiv Dictionary")  # Placeholder for additional dictionaries
     print("3. Yoruba Dictionary")  # Placeholder for additional dictionaries
     print("4. Hausa Dictionary")  # Placeholder for additional dictionaries
-    print("5. [Other Dictionary Option]")  # Placeholder for additional dictionaries
+    print("5. Igbo Dictionary")  # Placeholder for additional dictionaries
     choice = input("Enter the number of your choice: ")
 
     if choice == '1':
