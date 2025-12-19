@@ -62,6 +62,24 @@ Yoruba_dict = {
    "please" : "Ejor",
 }
 
+def Hadassah_dict():
+    print("------------ Welcome to the Yoruba Dictionary! -----------------------------")
+    print("------------ Avaliable english words to translate to Yoruba-----------------")
+    
+    for word in sorted(Yoruba_dict.keys()):
+        print(f"- {word}")
+    print("-" * 30)
+
+    user_input = input("From the list of word above, what word do u need the meaning of? ").capitalize().strip()
+    
+    translate = Yoruba_dict.get(user_input)
+
+    if translate:
+        print(f"\nSuccess: The Yoruba translation for the word '{user_input}' is '{translate}'.")
+    else:
+        print(f"\nError: The word '{user_input}' is not available in the Otuo dictionary.")
+
+
 #-----------------Ella Dictionary-----------------------
 Hausa_dict = {
     "Sannu" : "Hello",
@@ -85,6 +103,24 @@ Hausa_dict = {
     "Makaranta" : "School",
     "Aiki" : "Job",
 }
+
+def Ella_dict():
+    print("------------ Welcome to the Hausa Dictionary! -----------------------------")
+    print("------------ Avaliable english words to translate to Hausa-----------------")
+    
+    for word in sorted(Hausa_dict.keys()):
+        print(f"- {word}")
+    print("-" * 30)
+
+    user_input = input("From the list of word above, what word do u need the meaning of? ").capitalize().strip()
+    
+    translate = Hausa_dict.get(user_input)
+
+    if translate:
+        print(f"\nSuccess: The Otuo translation for the word '{user_input}' is '{translate}'.")
+    else:
+        print(f"\nError: The word '{user_input}' is not available in the Hausa dictionary.")
+
 #-----------------Gabriel Dictionary--------------------
 otuo_dict = {
     "Afternoon" : "Oronta",
@@ -137,7 +173,7 @@ def main():
     print("1. Otuo Dictionary")
     print("2. Tiv Dictionary")  # Placeholder for additional dictionaries
     print("3. Yoruba Dictionary")  # Placeholder for additional dictionaries
-    print("4. [Other Dictionary Option]")  # Placeholder for additional dictionaries
+    print("4. Hausa Dictionary")  # Placeholder for additional dictionaries
     print("5. [Other Dictionary Option]")  # Placeholder for additional dictionaries
     choice = input("Enter the number of your choice: ")
 
@@ -146,14 +182,15 @@ def main():
     elif choice == '2':
         kamsi_dict()
     elif choice == '3':
-        print("Other Dictionary Option selected. (Functionality not implemented yet.)")
+        Hadassah_dict()
     elif choice == '4':
-        print("Other Dictionary Option selected. (Functionality not implemented yet.)")
+        Ella_dict()
     elif choice == '5':
         print("Other Dictionary Option selected. (Functionality not implemented yet.)") 
     else:
         print("Invalid choice. Please select a valid dictionary.")
 main()
+
 
 
 
