@@ -77,7 +77,7 @@ def Hadassah_dict():
     if translate:
         print(f"\nSuccess: The Yoruba translation for the word '{user_input}' is '{translate}'.")
     else:
-        print(f"\nError: The word '{user_input}' is not available in the Otuo dictionary.")
+        print(f"\nError: The word '{user_input}' is not available in the Yoruba dictionary.")
 
 
 #-----------------Ella Dictionary-----------------------
@@ -117,7 +117,7 @@ def Ella_dict():
     translate = Hausa_dict.get(user_input)
 
     if translate:
-        print(f"\nSuccess: The Otuo translation for the word '{user_input}' is '{translate}'.")
+        print(f"\nSuccess: The Hausa translation for the word '{user_input}' is '{translate}'.")
     else:
         print(f"\nError: The word '{user_input}' is not available in the Hausa dictionary.")
 
@@ -190,6 +190,7 @@ def main():
     else:
         print("Invalid choice. Please select a valid dictionary.")
 main()
+
 
 
 
